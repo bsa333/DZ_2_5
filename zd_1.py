@@ -5,7 +5,6 @@
 #a) Добавьте игру против бота
 
 from random import *
-
 import os
 os.system('cls' if os.name == 'nt' else 'clear')
 

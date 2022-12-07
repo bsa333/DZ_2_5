@@ -1,21 +1,24 @@
 #Создайте программу для игры в ""Крестики-нолики"".
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
 
-print('*'*100)
-print('\n')
-print('А теперь давайте сыграем в крестики нолики!')
+
+
 
 board = list(range(1,10))
 
 def design_board(board):
+    print('\n')
     print('-'*12)
     for i in range(3):
         print('|', board[0+i*3],'|', board[1+i*3], '|', board[2+i*3], '|')
-        print('-'*12)
+        print('-'*12 )
+        
 
 def choice(tic_tac):
     valid = False
     while not valid:
-        player_index = input('Ваш ход, выберите ячейку ' + tic_tac + ' --> ')
+        player_index = input( '\n''Ваш ход, выберите ячейку ' + tic_tac + ' --> ' )
         try:
             player_index =int(player_index)
         except:
@@ -40,7 +43,7 @@ def victory_check(board):
     return False
 
 def game(board):
-    counter =0
+    counter=0
     vic = False
     while not vic:
         design_board(board)
